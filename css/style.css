@@ -1,31 +1,36 @@
-/* General Styling */
+/* Reset and base styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  background: #f0f2f5;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
   color: #333;
   line-height: 1.6;
 }
 
-/* Header Styling */
 header {
-  background: #2c3e50;
+  background: linear-gradient(to right, #cda3dd, #ad4ad4);
   color: white;
-  padding: 40px 20px;
+  padding: 2rem;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation Styling */
+.logo {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 10px 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 nav ul li {
-  display: inline-block;
   margin: 0 15px;
 }
 
@@ -33,54 +38,84 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #1abc9c;
+  text-decoration: underline;
 }
 
 /* Section Styling */
 section {
-  padding: 30px;
-  margin: 30px auto;
+  padding: 40px 20px;
   max-width: 900px;
-  background: white;
+  margin: auto;
+  background-color: white;
+  margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Form Styling */
-form input,
-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0 20px;
+h2, h3 {
+  color: #993fd4;
+}
+
+/* About Section */
+.about-container {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+input, textarea {
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
-form button {
-  padding: 12px 25px;
-  background: #1abc9c;
+button {
+  padding: 10px;
+  background-color: #9459e0;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  font-weight: bold;
 }
 
-form button:hover {
-  background: #16a085;
+button:hover {
+  background-color: lab(52.22% 52.68 -57.25);
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: #2c3e50;
+  background-color: #a156e7;
   color: white;
-  font-size: 14px;
-  margin-top: 40px;
+  border-top: 1px solid #ccc;
 }
