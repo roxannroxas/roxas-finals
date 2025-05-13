@@ -2,123 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="css/style.css"/>
+ <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
+    
      <img src="https://images.crunchbase.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/f8uobjttj85kupus7x3z" alt="Logo" class="logo"/>
-    <h1>Hi, I'm Roxanne Roxas</h1>
-    <p>I’m a BSIT student at La Consolacion University, passionate about web development, UI/UX design, and creating tech solutions. I focus on building user-friendly websites and applications that make a positive impact.</p>
+    
+    <h1>Roxanne C. Roxas</h1>
+    <p>3rd Year BSIT Student - La Consolacion University Philippines</p>
+     <p>I’m a BSIT student at La Consolacion University, passionate about web development, UI/UX design, and creating tech solutions. I focus on building user-friendly websites and applications that make a positive impact.</p>
+    <nav>
     <nav>
       <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('about')">About Me</a></li>
+        <li><a href="#" onclick="showSection('education')">Education</a></li>
+        <li><a href="#" onclick="showSection('achievements')">Achievements</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <img src="c:\Users\rpete\Downloads\2B_RoxasRoxanne.jpg" alt="Profile Picture" class="profile-pic"/>
-      <p>I am a third-year Bachelor of Science in Information Technology (BSIT) student at La Consolacion University Philippines. As an aspiring developer, I am passionate about creating real-world tech solutions that improve lives and empower communities. My interests include full-stack web development, UI/UX design, and leveraging technology to solve everyday problems.</p>
-    </div>
-  </section>
+  <main>
+    <section id="home" class="section">
+      <h2>Welcome</h2>
+      <p>This is my personal portfolio website. Feel free to explore!</p>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML, Java, C#</li>
-      <li>Python, Git, WordPress</li>
-    </ul>
-  </section>
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <div class="about-container">
+         <img src="c:\Users\rpete\Downloads\2B_RoxasRoxanne.jpg" alt="Profile Picture" class="profile-pic"/>
+       <p><strong>Name:</strong> Roxanne C. Roxas</p>
+    <p><strong>Age:</strong> 21</p>
+    <p><strong>Birthday:</strong> June 17, 2003</p>
+    <p><strong>Address:</strong> Catmon, Malolos, Bulacan</p>
+    <p><strong>Email:</strong> <a href="mailto:roxanne.roxas@email.lcup.edu.ph">roxanne.roxas@email.lcup.edu.ph</a></p>
+    <p><strong>Contact:</strong> 09603904241</p>
+    <p>I’m a BSIT student at La Consolacion University, passionate about web development, UI/UX design, and creating tech solutions. I focus on building user-friendly websites and applications that make a positive impact.</p>
+    <p><strong>Skills:</strong> HTML, CSS, JavaScript, Java, Python, C#, Web Development, UI/UX Design, Project Management</p>
+    <p><strong>Hobbies:</strong> Coding, Drawing, Gaming, Watching Movies, Learning New Technologies</p>
+  </div>
+</section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Check out my work on <a href="https://github.com/roxannroxas">GitHub</a></p>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="experience-entry">
-      <p>Through school projects and activities, I continuously gain valuable experience that enhances my learning and skills.</p>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <p><strong>La Consolacion University Philippines</strong><br>
+    <section id="education" class="section">
+      <h2>Education</h2>
+        <p><strong>La Consolacion University Philippines</strong><br>
       Bachelor of Science in Information Technology (3rd Year)</p>
-    <ul>
-      <li>Dean's Lister – 1st Year, 2nd Year, and 3rd Year</li>
-    </ul>
-    <p><strong>Senior High School</strong><br>
-      With Honors (Grade 11–12)</p>
-    <p><strong>Junior High School</strong><br>
-      With Honors (Grade 7–10)</p>
-    <p><strong>Elementary</strong><br>
-      With Honors (Grade 3–6)</p>
-  </section>
+      <ul>
+        <li>Dean's Lister – 1st Year, 2nd Year, and 3rd Year</li>
+         </ul>
+        <li>Elementary with Honors (Grades 3–6)</li>
+        <li>Junior High School with Honors (Grades 7–10)</li>
+        <li>Senior High School with Honors (Grades 11–12)</li>
+      </ul>
+    </section>
 
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <section id="awards">
+    <section id="achievements" class="section">
+      <h2>Achievements</h2>
       <h3>Awards</h3>
       <ul>
-        <li>Mythical 6 – Volleyball (Grade 9–10)</li>
-        <li>Badminton – 3rd Place Singles (Grade 9)</li>
-        <li>Badminton – Champion Singles and Doubles (Grade 10)</li>
+        <li>Mythical 6 Volleyball (Grade 9–10)</li>
+        <li>Badminton 3rd Placer Singles (Grade 9)</li>
+        <li>Badminton Champion Singles & Doubles (Grade 10)</li>
         <li>Body and Self Smart Award (Grade 7–10)</li>
-        <li>Loyalty Award (Kindergarten and Grade 6)</li>
+        <li>Loyalty Award (Kindergarten & Grade 6)</li>
       </ul>
-    </section>
-    <section id="events">
+
       <h3>Events</h3>
       <ul>
-        <li>Charity Work – Children’s Orphanage</li>
-        <li>Tree Planting – Junior High School</li>
+        <li>Charity for Children's Orphanage</li>
+        <li>Tree Planting (Junior High School)</li>
       </ul>
-    </section>
-    <section id="accomplishments">
+
       <h3>Accomplishments</h3>
       <ul>
-        <li>Varsity Athlete – Grade 8 to Grade 10</li>
-        <li>MACIPRISA Participant</li>
+        <li>Varsity Player (Grade 8–10)</li>
+        <li>Participated in MACIPRISA</li>
         <li>Champion – Math & ICT Week (Grade 4)</li>
       </ul>
-    </section>
-    <section id="positions">
+
       <h3>Positions Held</h3>
       <ul>
-        <li>Grade 10 – Class Public Relations Officer (PRO)</li>
-        <li>1st Year College – Class Vice President</li>
-        <li>Sports Club – Vice President</li>
-        <li>JPSSITE – Former Assistant Secretary</li>
+        <li>Grade 10 Class PRO</li>
+        <li>1st Year College Class Vice President</li>
+        <li>Sports Club Vice President</li>
+        <li>JPSSITE Former Asst. Secretary</li>
       </ul>
     </section>
-  </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <p>Email: example@email.com</p>
-  </section>
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Roxanne Roxas</p>
+    <p>&copy; 2025 Roxanne C. Roxas. All rights reserved.</p>
   </footer>
+ <script src="script.js"></script> <!-- Link to script.js -->
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('main .section');
+      sections.forEach(section => {
+        section.style.display = (section.id === id) ? 'block' : 'none';
+      });
+    }
 
-  <script src="js/script.js"></script>
+    // Optional: Show home on load
+    window.onload = () => {
+      showSection('home');
+    };
+  </script>
 </body>
 </html>
