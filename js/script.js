@@ -1,7 +1,7 @@
-// Placeholder for JavaScript functionality
+
 console.log("Portfolio loaded.");
 
-// Function to switch sections
+
 function showSection(id) {
   const sections = document.querySelectorAll('main .section');
   sections.forEach(section => {
@@ -9,7 +9,7 @@ function showSection(id) {
   });
 }
 
-// Optional: Automatically show the 'home' section on page load
+
 window.onload = () => {
   showSection('home');
 };

@@ -22,15 +22,30 @@
         <li><a href="#" onclick="showSection('education')">Education</a></li>
         <li><a href="#" onclick="showSection('achievements')">Achievements</a></li>
         <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        <li><a href="#" onclick="showSection('add-profile')">Add Profile</a></li>
+
       </ul>
     </nav>
   </header>
 
   <main>
     <section id="home" class="section">
-      <h2>Welcome</h2>
-      <p>This is my personal portfolio website. Feel free to explore!</p>
-    </section>
+  <h2>Welcome</h2>
+  <p>This is my personal portfolio website. Feel free to explore and get to know me!</p>
+
+   <div id="commentSectionWrapper" style="display: flex; justify-content: center; margin-top: 40px;">
+    <div id="commentSection" style="max-width: 600px; width: 100%;">
+      <h3 style="text-align: center;">Leave Your Insight About Me</h3>
+      <form id="commentForm">
+        <input type="text" id="commenterName" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom: 10px;" />
+        <textarea id="commentText" rows="4" placeholder="Your Insight or Comment" required style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea>
+        <button type="submit" style="padding: 10px 20px; display: block; margin: 0 auto;">Post Comment</button>
+      </form>
+      <div id="commentsOutput" style="margin-top: 20px;"></div>
+    </div>
+  </div>
+</section>
+
 
     <section id="about" class="section">
       <h2>About Me</h2>
@@ -95,20 +110,37 @@
     </section>
 
     <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+  <h2>Contact Me</h2>
+  <form id="contactForm">
+    <input type="text" id="contactName" placeholder="Your Name" required />
+    <input type="email" id="contactEmail" placeholder="Your Email" required />
+    <textarea id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div id="contactOutput" style="margin-top: 20px;"></div>
+</section>
+
+
+    <section id="add-profile" class="section">
+  <h2>Create / Add Profile</h2>
+  <form id="profileForm">
+    <input type="text" id="name" placeholder="Full Name" required />
+    <input type="email" id="email" placeholder="Email Address" required />
+    <input type="text" id="course" placeholder="Course / Program" required />
+    <textarea id="bio" placeholder="Short Bio" rows="4" required></textarea>
+    <button type="submit">Add Profile</button>
+  </form>
+
+  <div id="profileOutput" style="margin-top: 20px;"></div>
+</section>
+ 
   </main>
 
   <footer>
     <p>&copy; 2025 Roxanne C. Roxas. All rights reserved.</p>
   </footer>
- <script src="script.js"></script> <!-- Link to script.js -->
+ <script src="script.js"></script> 
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('main .section');
@@ -117,8 +149,64 @@
       });
     }
 
-    // Optional: Show home on load
     window.onload = () => {
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('commenterName').value;
+  const comment = document.getElementById('commentText').value;
+
+  const commentHTML = `
+    <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px; background: #f0f0f0;">
+      <p><strong>${name}</strong></p>
+      <p>${comment}</p>
+    </div>
+  `;
+
+  const outputDiv = document.getElementById('commentsOutput');
+  outputDiv.innerHTML = commentHTML + outputDiv.innerHTML;
+
+  document.getElementById('commentForm').reset();
+});
+
+    document.getElementById('profileForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const course = document.getElementById('course').value;
+  const bio = document.getElementById('bio').value;
+
+  const output = `
+    <h3>Profile Added:</h3>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Course:</strong> ${course}</p>
+    <p><strong>Bio:</strong> ${bio}</p>
+  `;
+
+  document.getElementById('profileOutput').innerHTML = output;
+
+});
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('contactName').value;
+  const email = document.getElementById('contactEmail').value;
+  const message = document.getElementById('contactMessage').value;
+
+  const output = `
+    <h3>Message Sent:</h3>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Message:</strong> ${message}</p>
+  `;
+
+  document.getElementById('contactOutput').innerHTML = output;
+
+});
+
+
       showSection('home');
     };
   </script>
